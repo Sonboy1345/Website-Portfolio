@@ -104,11 +104,11 @@ body {
     width: 100%;
     height: auto;
     color: #ffffff;
-    height: 50vh;  /* Set banner height to 50% of the viewport height */
+    height: 50vh;
     display: flex;
-    justify-content: center;  /* Center the content horizontally */
+    justify-content: center;  
     align-items: center;
-    padding: 40px 150px;  /* Add padding for more space inside the banner */
+    padding: 40px 150px;  
     position: relative;
     z-index: 1;
     
@@ -133,78 +133,77 @@ body {
 }
 
 .banner-text {
-    margin-right: 50px;  /* Add space between text and image */
-    text-align: right;  /* Align text to the right */
+    margin-right: 50px; 
+    text-align: right;  
     display: flex;
-    flex-direction: column; /* Stack lines vertically */
-    gap: 10px; /* Space between lines */
+    flex-direction: column; 
+    gap: 10px; 
 }
 
 .banner-text .line1 {
-    font-size: 40px;  /* Line 1 font size */
-    line-height: 1.2; /* Adjust line height for better spacing */
-    margin-bottom: 10px;  /* Add space below line 1 */
+    font-size: 40px;  
+    line-height: 1.2; 
+    margin-bottom: 10px;  
     color: white;
     text-shadow: 
-        2px 2px 0px var(--background-color),  /* เงาด้านขวาล่าง */
-        -2px -2px 0px var(--background-color),  /* เงาด้านซ้ายบน */
-        2px -2px 0px var(--background-color),  /* เงาด้านขวาบน */
-        -2px 2px 0px var(--background-color);  /* เงาด้านซ้ายล่าง */
+        2px 2px 0px var(--background-color), 
+        -2px -2px 0px var(--background-color),  
+        2px -2px 0px var(--background-color), 
+        -2px 2px 0px var(--background-color);  
 }
 
 .banner-text .line2 {
-    font-size: 60px;  /* Line 2 font size */
-    line-height: 1.2; /* Adjust line height for better spacing */
-    margin-bottom: 10px;  /* Add space below line 2 */
+    font-size: 60px;  
+    line-height: 1.2; 
+    margin-bottom: 10px; 
     color: white;
     text-shadow: 
-        2px 2px 0px var(--background-color),  /* เงาด้านขวาล่าง */
-        -2px -2px 0px var(--background-color),  /* เงาด้านซ้ายบน */
-        2px -2px 0px var(--background-color),  /* เงาด้านขวาบน */
-        -2px 2px 0px var(--background-color);  /* เงาด้านซ้ายล่าง */
+        2px 2px 0px var(--background-color), 
+        -2px -2px 0px var(--background-color),  
+        2px -2px 0px var(--background-color), 
+        -2px 2px 0px var(--background-color);  
 }
 
 .banner-text .line3 {
-    font-size: 20px;   /* Line 3 font size */
-    line-height: 1.2; /* Adjust line height for better spacing */
+    font-size: 20px;  
+    line-height: 1.2; 
     color: white;
     text-shadow: 
-        2px 2px 0px var(--background-color),  /* เงาด้านขวาล่าง */
-        -2px -2px 0px var(--background-color),  /* เงาด้านซ้ายบน */
-        2px -2px 0px var(--background-color),  /* เงาด้านขวาบน */
-        -2px 2px 0px var(--background-color);  /* เงาด้านซ้ายล่าง */
+        2px 2px 0px var(--background-color),  
+        -2px -2px 0px var(--background-color), 
+        2px -2px 0px var(--background-color),  
+        -2px 2px 0px var(--background-color);  
 }
 .social-buttons {
     display: flex;
-    justify-content: center; /* จัดให้อยู่ตรงกลาง */
-    gap: 15px; /* เว้นระยะห่างระหว่างปุ่ม */
-    margin-top: 20px; /* เว้นช่องว่างด้านบน */
+    justify-content: center;
+    gap: 15px; 
+    margin-top: 20px; 
   }
+
   
-  /* สไตล์สำหรับปุ่มแต่ละปุ่ม */
   .social-icon img {
-    width: 50px; /* ขนาดของไอคอน */
+    width: 50px; 
     height: 50px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มเอฟเฟกต์ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
   }
   
-  /* เอฟเฟกต์เมื่อเมาส์ hover */
+  
   .social-icon:hover img {
-    transform: scale(1.1); /* ขยายขนาดเล็กน้อย */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
-  
-  /* เอฟเฟกต์เฉพาะสำหรับแต่ละโซเชียล */
+
   .social-icon.facebook img {
-    border-radius: 50%; /* ทำให้ไอคอนเป็นวงกลม */
+    border-radius: 50%; 
   }
   
   .social-icon.instagram img {
-    border-radius: 10px; /* ทำให้ไอคอนมีขอบโค้งมนเล็กน้อย */
+    border-radius: 10px; 
   }
   
   .social-icon.youtube img {
-    border-radius: 5px; /* ขอบโค้งน้อย */
+    border-radius: 5px; 
   }
 
 header {
@@ -265,11 +264,11 @@ main {
     flex: 1;
     color: #ffffff;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    padding: 50px 50px; /* ลด padding ด้านข้างลง 50px แทน 100px */
-    margin-top: 10px; /* Adjust for header height */
-    margin-left: 0; /* ชิดซ้าย */
-    width: 90%; /* กำหนดความกว้างของ main ให้ลดลง 10% จาก 100% */
+    grid-template-columns: repeat(3, 1fr); 
+    padding: 50px 50px;
+    margin-top: 10px; 
+    margin-left: 0;
+    width: 90%; 
 }
 
 main div {
@@ -277,11 +276,10 @@ main div {
     background-color: rgba(0, 0, 0, 0);
     margin: -35px;
     border-radius: 10%;
-    width: 1000px; /* ทำให้กรอบยืดเต็มหน้าจอ */
-    max-width: 100%; /* จำกัดความกว้างที่ต้องการยืดได้สูงสุด (ปรับค่าตามต้องการ) */
-    box-sizing: border-box; /* รวม padding เข้ากับขนาดกล่อง */
-    margin-left: -50; /* ทำให้กล่องชิดขวา */
-
+    width: 1000px; 
+    max-width: 100%; 
+    box-sizing: border-box; 
+    margin-left: -50; 
 }
 
 main{
@@ -296,81 +294,80 @@ main {
     flex: 1;
     color: #ffffff;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr); 
     padding: 50px 100px;
-    margin-top: 5px; /* Adjust for header height */
+    margin-top: 5px;
     
 }
 main h3 {
-    font-size: 1.66em; /* ลดจาก 1.75em */
+    font-size: 1.66em; 
 }
 
 main p {
-    font-size: 1.19em; /* ลดจาก 1.25em */
+    font-size: 1.19em; 
 }
 
-/* ลดขนาดฟอนต์ใน #about_me */
 #about_me {
     background-color: var(--background-color);
     color: var(--text-color);
-    padding: 40px 20px; /* Adjusted padding */
+    padding: 40px 20px; 
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: flex-start; /* Align items to the top */
+    justify-content: center; 
+    align-items: flex-start; 
 }
 
 .about-info {
     display: flex;
-    flex-direction: row; /* Change this to row if not already */
-    align-items: flex-start; /* Align items to start */
-    font-size: 12px; /* เพิ่มขนาดฟอนต์ที่นี่ */
+    flex-direction: row; 
+    align-items: flex-start; 
+    font-size: 12px; 
 }
 
 .about-image {
-    margin-right: 20px; /* Add some space between the image and the text */
+    margin-right: 20px; 
 }
 
 .right-content {
     display: flex;
-    flex-direction: column; /* Stack the content vertically */
+    flex-direction: column; 
 }
 
 
 .main-image {
-    width: 100%; /* Full width */
-    max-width: 300px; /* Adjust max width */
-    height: auto; /* Maintain aspect ratio */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
-    border: 5px solid var(--sec-color); /* Border */
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    border: 5px solid var(--sec-color);
 }
 .content-with-logo {
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    justify-content: center;
 }
 
 .logo {
-    width: 80px; /* Adjust logo size */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between logo and text */
+    width: 80px; 
+    height: auto; 
+    margin-right: 10px; 
 }
 .main-image {
-    width: 100%; /* Full width of the container */
-    max-width: 800px; /* Increase max width to your desired size */
-    height: auto; /* Maintain aspect ratio */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
-    border: 5px solid var(--sec-color); /* Border */
+    width: 100%; 
+    max-width: 800px; 
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    border: 5px solid var(--sec-color);
     
 }
 
 .text-content {
-    font-size: 1.2em; /* Adjust font size for better readability */
+    font-size: 1.2em; 
 }
 
 .right-content {
-    flex: 1; /* Take 1 part of the flex space */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column; 
 }
 
 .skills-container {
@@ -470,113 +467,113 @@ h1 {
 
 #activities {
     display: flex;
-    flex-direction: column; /* Make sure to stack activity sections vertically */
-    align-items: center; /* Center align the content */
-    background-color: var(--background-color); /* Background color */
-    padding: 20px; /* Padding around the section */
+    flex-direction: column; 
+    align-items: center; 
+    background-color: var(--background-color); 
+    padding: 20px; 
 }
 
 .activity-container-1,
 .activity-container-2 {
-    background-color: var(--SS-color); /* Apply styles to both containers */
-    display: flex; /* Arrange images and description in a row */
-    gap: 20px; /* Space between images and description */
-    align-items: flex-start; /* Align items at the top */
-    margin-bottom: 20px; /* Add space between each activity container */
+    background-color: var(--SS-color); 
+    display: flex; 
+    gap: 20px;
+    align-items: flex-start; 
+    margin-bottom: 20px;
 }
 
 .activity-images {
-    display: flex; /* Display images in a row */
-    gap: 10px; /* Space between images */
+    display: flex; 
+    gap: 10px; 
 }
 
 .activity-image {
-    max-width: 500px; /* Increased max-width for larger images */
-    height: auto; /* Keep the aspect ratio */
-    border: 2px solid var(--sec-color); /* Optional: Add border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
+    max-width: 500px; 
+    height: auto;
+    border: 2px solid var(--sec-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .activity-description {
-    max-width: 500px; /* Set max width for description box */
-    text-align: left; /* Left-align the text */
+    max-width: 500px; 
+    text-align: left; 
 }
 
 .activity-description h2 {
-    font-size: 24px; /* Font size for the title */
+    font-size: 24px; 
     color: var(--text-color);
 }
 
 .activity-description h3 {
-    font-size: 20px; /* Font size for the subtitle */
-    color: var(--text-II-color); /* Color for the subtitle */
+    font-size: 20px; 
+    color: var(--text-II-color); 
 }
 
 .activity-description p {
-    font-size: 16px; /* Font size for the paragraph */
-    line-height: 1.5; /* Line height for better readability */
+    font-size: 16px; 
+    line-height: 1.5; 
     color: var(--text-II-color);
 }
 .button-container {
-    display: flex; /* ใช้ flexbox เพื่อจัดเรียงปุ่มในแถว */
-    justify-content: center; /* จัดให้อยู่กลาง */
-    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
-    margin: 20px 0; /* ระยะห่างด้านบนและด้านล่าง */
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin: 20px 0; 
 }
 
 .button-container {
-    display: flex; /* ใช้ flexbox เพื่อจัดเรียงปุ่ม */
-    flex-direction: column; /* จัดเรียงในแนวตั้ง */
-    align-items: center; /* จัดให้อยู่กลาง */
-    margin: 20px 0; /* ระยะห่างด้านบนและด้านล่าง */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 20px 0; 
 }
 
 .sub-button-container {
-    display: flex; /* ใช้ flexbox เพื่อจัดเรียงปุ่มและข้อความ */
-    align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
-    gap: 10px; /* ระยะห่างระหว่างปุ่มและข้อความ */
-    margin-top: 10px; /* ระยะห่างด้านบนของปุ่ม */
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 10px; 
 }
 
 .button {
-    background-color: var(--sec-color); /* เปลี่ยนสีพื้นหลังตามที่ต้องการ */
-    color: white; /* สีของข้อความ */
-    padding: 15px 30px; /* เพิ่มระยะห่างภายใน */
-    border: none; /* ไม่มีกรอบ */
-    border-radius: 10px; /* มุมมน เพิ่มมุมมนให้ใหญ่ขึ้น */
-    font-size: 20px; /* ขนาดฟอนต์เพิ่มขึ้น */
-    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
-    transition: background-color 0.3s, transform 0.2s; /* การเปลี่ยนสีพื้นหลังและการเคลื่อนไหว */
-    text-align: center; /* จัดข้อความในปุ่มให้กึ่งกลาง */
-    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    background-color: var(--sec-color); 
+    color: white; 
+    padding: 15px 30px; 
+    border: none; 
+    border-radius: 10px; 
+    font-size: 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s; 
+    text-align: center; 
+    text-decoration: none; 
 }
 
 .button:hover {
-    background-color: darken(var(--sec-color), 10%); /* สีพื้นหลังเมื่อ hover */
-    transform: scale(1.05); /* ขยายปุ่มเมื่อ hover */
+    background-color: darken(var(--sec-color), 10%);
+    transform: scale(1.05); 
 }
 
 .extra-text {
-    font-size: 16px; /* ขนาดฟอนต์ของข้อความ */
-    color: var(--text-color); /* สีของข้อความ */
+    font-size: 16px; 
+    color: var(--text-color); 
 }
 .image-container {
-    text-align: center; /* จัดให้ข้อความอยู่กลางใต้ภาพ */
-    margin: 10px; /* ระยะห่างระหว่างภาพ */
+    text-align: center; 
+    margin: 10px; 
 }
 
 .image-caption {
-    font-size: 14px; /* ขนาดฟอนต์ของข้อความใต้ภาพ */
-    color: var(--text-color); /* สีของข้อความใต้ภาพ */
-    margin-top: 5px; /* ระยะห่างระหว่างภาพและข้อความ */
+    font-size: 14px; 
+    color: var(--text-color); 
+    margin-top: 5px; 
 }
 
 #certificates{
 display: flex;
-flex-direction: column; /* Make sure to stack activity sections vertically */
-align-items: center; /* Center align the content */
-background-color: var(--background-color); /* Background color */
-padding: 20px; /* Padding around the section */
+flex-direction: column; 
+align-items: center; 
+background-color: var(--background-color); 
+padding: 20px; 
 }
 .certificates-container {
     padding: 20px;
@@ -617,32 +614,32 @@ h1 {
 
 #contact_me h1{
     display: flex;
-    flex-direction: column; /* Make sure to stack activity sections vertically */
-    align-items: center; /* Center align the content */
-    background-color: var(--background-color); /* Background color */
-    padding: 20px; /* Padding around the section */
+    flex-direction: column; 
+    align-items: center; 
+    background-color: var(--background-color); 
+    padding: 20px; 
     }
 
 .custom_container { 
     display: flex;
-    align-items: center; /* จัดกลางในแนวตั้ง */
-    justify-content: space-evenly; /* จัดเรียงให้เริ่มจากซ้าย */
+    align-items: center; 
+    justify-content: space-evenly;
 }
 
 .custom_image_container {
     transform: rotate(-5deg);
-    margin-left: 30px; /* ระยะห่างจากข้อความ */
+    margin-left: 30px; 
 }
 
 .custom_image_container img {
-    width: 100%; /* ทำให้ภาพขยายเต็มความกว้าง */
-    max-width: 220px; /* จำกัดความกว้างสูงสุดของภาพ */
+    width: 100%; 
+    max-width: 220px; 
     border-radius: 15px;
 }
 
 .Cont {
-    margin-right: 30px; /* ระยะห่างระหว่างข้อความกับรูปภาพ */
-    text-align: left; /* จัดข้อความไปทางซ้าย */
+    margin-right: 30px; 
+    text-align: left; 
 }
 
 .Cont p {
@@ -654,14 +651,14 @@ h1 {
 }
 
 .Cont a {
-    margin-right: 15px; /* ระยะห่างระหว่างไอคอน */
-    display: inline-block; /* ทำให้แต่ละไอคอนเป็นบล็อกย่อยแยกกัน */
+    margin-right: 15px; 
+    display: inline-block; 
 }
 
 .Cont img {
     width: 40px;
     height: 40px;
-    vertical-align: middle; /* จัดไอคอนให้ตรงกับข้อความถ้ามี */
+    vertical-align: middle; 
 }
 
 
