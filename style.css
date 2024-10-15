@@ -2,16 +2,47 @@
 @font-face{
     font-family: HarryPotter;
     src:url(HARRYP__.TTF);
+    font-family: jose;
+    src:url(JOSE_.ttf);
 }
+
 
 /* กำหนดตัวแปรสีที่นี่ */
 :root { 
     --background-color:#384342 ; 
     --sec-color: #383838; 
     --text-color: #fefeec;
-    --text-II-color: #f0f092;
+    --text-II-color: #a9c5c5;
+    --head-color: #ededed;
+    --texe-I-color: #828282;
+    --SS-color: #384441;
+    --head-text: #ffffc9
+}
+#myBtn {
+    display: none; /* ซ่อนปุ่มเริ่มต้น */
+    position: fixed; /* ตำแหน่งคงที่ */
+    bottom: 30px; /* ระยะห่างจากด้านล่าง */
+    right: 30px; /* ระยะห่างจากด้านขวา */
+    background-color: #007BFF; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    border: none; /* ไม่ต้องมีกรอบ */
+    border-radius: 5px; /* มุมโค้ง */
+    padding: 10px 15px; /* ขนาดปุ่ม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์ */
+    font-size: 16px; /* ขนาดฟอนต์ */
+    box-shadow: 0 2px 5px rgba(246, 244, 244, 0.3); /* เพิ่มเงา */
+    transition: background-color 0.3s, transform 0.3s; /* เอฟเฟกต์การเปลี่ยนสีและขนาด */
 }
 
+#myBtn:hover {
+    background-color: #0056b3; /* เปลี่ยนสีเมื่อวางเมาส์ */
+    transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อวางเมาส์ */
+}
+
+
+#myBtn:hover {
+    background-color: #0056b3; /* เปลี่ยนสีเมื่อวางเมาส์ */
+}
 * {
     margin: 0;
     padding: 0;
@@ -20,15 +51,21 @@
 }
 
 html, body {
-    height: 100%;
+    height: 100px;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background: var(--sec-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh; /* Ensures the body always takes the full viewport height */
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 .navlist {
     display: flex;
@@ -45,7 +82,7 @@ body {
 /* เอาเมาท์ชี้เเล้วสีเปลี่ยน */
 .navlist a:hover {
     font-size: xx-large;
-    color: var(--text-II-color);
+    color: var(--texe-color);
     text-shadow: 3px 3px 20px var(), -2px 1px 30px var(); /* การทำเงา */
 }
 
@@ -63,15 +100,18 @@ body {
 
 /* แก้สี */
 .banner {
-    background-color: var(--background-color);
+    background-image: url('BG.png');
+    width: 100%;
+    height: auto;
     color: #ffffff;
     height: 50vh;  /* Set banner height to 50% of the viewport height */
     display: flex;
     justify-content: center;  /* Center the content horizontally */
     align-items: center;
-    padding: 20px 100px;  /* Add padding for more space inside the banner */
+    padding: 40px 150px;  /* Add padding for more space inside the banner */
     position: relative;
     z-index: 1;
+    
 }
 
 .banner-info {
@@ -104,18 +144,68 @@ body {
     font-size: 40px;  /* Line 1 font size */
     line-height: 1.2; /* Adjust line height for better spacing */
     margin-bottom: 10px;  /* Add space below line 1 */
+    color: white;
+    text-shadow: 
+        2px 2px 0px var(--background-color),  /* เงาด้านขวาล่าง */
+        -2px -2px 0px var(--background-color),  /* เงาด้านซ้ายบน */
+        2px -2px 0px var(--background-color),  /* เงาด้านขวาบน */
+        -2px 2px 0px var(--background-color);  /* เงาด้านซ้ายล่าง */
 }
 
 .banner-text .line2 {
     font-size: 60px;  /* Line 2 font size */
     line-height: 1.2; /* Adjust line height for better spacing */
     margin-bottom: 10px;  /* Add space below line 2 */
+    color: white;
+    text-shadow: 
+        2px 2px 0px var(--background-color),  /* เงาด้านขวาล่าง */
+        -2px -2px 0px var(--background-color),  /* เงาด้านซ้ายบน */
+        2px -2px 0px var(--background-color),  /* เงาด้านขวาบน */
+        -2px 2px 0px var(--background-color);  /* เงาด้านซ้ายล่าง */
 }
 
 .banner-text .line3 {
     font-size: 20px;   /* Line 3 font size */
     line-height: 1.2; /* Adjust line height for better spacing */
+    color: white;
+    text-shadow: 
+        2px 2px 0px var(--background-color),  /* เงาด้านขวาล่าง */
+        -2px -2px 0px var(--background-color),  /* เงาด้านซ้ายบน */
+        2px -2px 0px var(--background-color),  /* เงาด้านขวาบน */
+        -2px 2px 0px var(--background-color);  /* เงาด้านซ้ายล่าง */
 }
+.social-buttons {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    gap: 15px; /* เว้นระยะห่างระหว่างปุ่ม */
+    margin-top: 20px; /* เว้นช่องว่างด้านบน */
+  }
+  
+  /* สไตล์สำหรับปุ่มแต่ละปุ่ม */
+  .social-icon img {
+    width: 50px; /* ขนาดของไอคอน */
+    height: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มเอฟเฟกต์ */
+  }
+  
+  /* เอฟเฟกต์เมื่อเมาส์ hover */
+  .social-icon:hover img {
+    transform: scale(1.1); /* ขยายขนาดเล็กน้อย */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+  }
+  
+  /* เอฟเฟกต์เฉพาะสำหรับแต่ละโซเชียล */
+  .social-icon.facebook img {
+    border-radius: 50%; /* ทำให้ไอคอนเป็นวงกลม */
+  }
+  
+  .social-icon.instagram img {
+    border-radius: 10px; /* ทำให้ไอคอนมีขอบโค้งมนเล็กน้อย */
+  }
+  
+  .social-icon.youtube img {
+    border-radius: 5px; /* ขอบโค้งน้อย */
+  }
 
 header {
     position: sticky;
@@ -137,11 +227,10 @@ header.sticky {
 }
 
 header a.logo {
-    font-family: HarryPotter;
     font-weight: 700;
     color: var(--text-color);
     text-decoration: none;
-    font-size: 3em;
+    font-size: 2.8em;
     text-transform: uppercase;
     letter-spacing: 10px;
     transition: 0.6s;
@@ -174,22 +263,34 @@ header.sticky ul li a {
 
 main {
     flex: 1;
-    color: #ff0000;
+    color: #ffffff;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 50px 100px;
-    margin-top: px; /* Adjust for header height */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    padding: 50px 50px; /* ลด padding ด้านข้างลง 50px แทน 100px */
+    margin-top: 10px; /* Adjust for header height */
+    margin-left: 0; /* ชิดซ้าย */
+    width: 90%; /* กำหนดความกว้างของ main ให้ลดลง 10% จาก 100% */
 }
 
 main div {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: 10px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    margin: -35px;
     border-radius: 10%;
+    width: 1000px; /* ทำให้กรอบยืดเต็มหน้าจอ */
+    max-width: 100%; /* จำกัดความกว้างที่ต้องการยืดได้สูงสุด (ปรับค่าตามต้องการ) */
+    box-sizing: border-box; /* รวม padding เข้ากับขนาดกล่อง */
+    margin-left: -50; /* ทำให้กล่องชิดขวา */
+
+}
+
+main{
+    margin-top: 10px;
 }
 
 main div p {
-    margin-top: 10px;
+    margin-top: 5px;
+    font-family: 'Oswald', sans-serif;
 }
 main {
     flex: 1;
@@ -198,62 +299,398 @@ main {
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     padding: 50px 100px;
     margin-top: 5px; /* Adjust for header height */
+    
+}
+main h3 {
+    font-size: 1.66em; /* ลดจาก 1.75em */
 }
 
+main p {
+    font-size: 1.19em; /* ลดจาก 1.25em */
+}
 
-  .full-height {
-    height: 100vh; /* Full viewport height */
+/* ลดขนาดฟอนต์ใน #about_me */
+#about_me {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 40px 20px; /* Adjusted padding */
     display: flex;
     justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    font-size: 2em; /* Increase font size for visibility */
-}
-#about_me {
-    background-color: var(--background-color); /* ใช้สีที่ตรงกับธีม */
-    color: var(--text-color);
-    padding: 50px 100px; /* เพิ่มพื้นที่ว่างรอบๆเนื้อหา */
-    text-align: center; /* จัดเนื้อหาให้อยู่ตรงกลาง */
+    align-items: flex-start; /* Align items to the top */
 }
 
-#about_me h2 {
+.about-info {
+    display: flex;
+    flex-direction: row; /* Change this to row if not already */
+    align-items: flex-start; /* Align items to start */
+    font-size: 12px; /* เพิ่มขนาดฟอนต์ที่นี่ */
+}
+
+.about-image {
+    margin-right: 20px; /* Add some space between the image and the text */
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+}
+
+
+.main-image {
+    width: 100%; /* Full width */
+    max-width: 300px; /* Adjust max width */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+    border: 5px solid var(--sec-color); /* Border */
+}
+.content-with-logo {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.logo {
+    width: 80px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+}
+.main-image {
+    width: 100%; /* Full width of the container */
+    max-width: 800px; /* Increase max width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+    border: 5px solid var(--sec-color); /* Border */
+    
+}
+
+.text-content {
+    font-size: 1.2em; /* Adjust font size for better readability */
+}
+
+.right-content {
+    flex: 1; /* Take 1 part of the flex space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+.skills-container {
+    padding: 20px;
+}
+
+h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-#about_me p {
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill-item {
+    text-align: center;
+}
+
+.skill-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
     font-size: 1.2em;
-    margin-bottom: 40px;
+    margin-top: 5px;
 }
 
-.projects-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* เพิ่มระยะห่างระหว่างแต่ละโปรเจกต์ */
-}
-
-.project {
-    background-color: var(--sec-color);
-    color: var(--text-color);
+.education-container {
+    text-align: center;
     padding: 20px;
-    border-radius: 10px;
-    width: 250px; /* กำหนดขนาดความกว้างของแต่ละโปรเจกต์ */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
 }
 
-.project h3 {
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.school-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.school {
+    background-color: #374545;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.timeline {
+    background-color: #5A6A6A;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+}
+
+.now {
+    background-color: #6165FF;
+}
+
+.school-info {
+    text-align: left;
+}
+
+.school-info h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.project p {
+.subtext {
     font-size: 1em;
+    margin-bottom: 10px;
+    color: #A0B1B1;
+    margin-right: 20px;
 }
+
+.school-logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+
+#activities {
+    display: flex;
+    flex-direction: column; /* Make sure to stack activity sections vertically */
+    align-items: center; /* Center align the content */
+    background-color: var(--background-color); /* Background color */
+    padding: 20px; /* Padding around the section */
+}
+
+.activity-container-1,
+.activity-container-2 {
+    background-color: var(--SS-color); /* Apply styles to both containers */
+    display: flex; /* Arrange images and description in a row */
+    gap: 20px; /* Space between images and description */
+    align-items: flex-start; /* Align items at the top */
+    margin-bottom: 20px; /* Add space between each activity container */
+}
+
+.activity-images {
+    display: flex; /* Display images in a row */
+    gap: 10px; /* Space between images */
+}
+
+.activity-image {
+    max-width: 500px; /* Increased max-width for larger images */
+    height: auto; /* Keep the aspect ratio */
+    border: 2px solid var(--sec-color); /* Optional: Add border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
+}
+
+.activity-description {
+    max-width: 500px; /* Set max width for description box */
+    text-align: left; /* Left-align the text */
+}
+
+.activity-description h2 {
+    font-size: 24px; /* Font size for the title */
+    color: var(--text-color);
+}
+
+.activity-description h3 {
+    font-size: 20px; /* Font size for the subtitle */
+    color: var(--text-II-color); /* Color for the subtitle */
+}
+
+.activity-description p {
+    font-size: 16px; /* Font size for the paragraph */
+    line-height: 1.5; /* Line height for better readability */
+    color: var(--text-II-color);
+}
+.button-container {
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงปุ่มในแถว */
+    justify-content: center; /* จัดให้อยู่กลาง */
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+    margin: 20px 0; /* ระยะห่างด้านบนและด้านล่าง */
+}
+
+.button-container {
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงปุ่ม */
+    flex-direction: column; /* จัดเรียงในแนวตั้ง */
+    align-items: center; /* จัดให้อยู่กลาง */
+    margin: 20px 0; /* ระยะห่างด้านบนและด้านล่าง */
+}
+
+.sub-button-container {
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงปุ่มและข้อความ */
+    align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
+    gap: 10px; /* ระยะห่างระหว่างปุ่มและข้อความ */
+    margin-top: 10px; /* ระยะห่างด้านบนของปุ่ม */
+}
+
+.button {
+    background-color: var(--sec-color); /* เปลี่ยนสีพื้นหลังตามที่ต้องการ */
+    color: white; /* สีของข้อความ */
+    padding: 15px 30px; /* เพิ่มระยะห่างภายใน */
+    border: none; /* ไม่มีกรอบ */
+    border-radius: 10px; /* มุมมน เพิ่มมุมมนให้ใหญ่ขึ้น */
+    font-size: 20px; /* ขนาดฟอนต์เพิ่มขึ้น */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ไปที่ปุ่ม */
+    transition: background-color 0.3s, transform 0.2s; /* การเปลี่ยนสีพื้นหลังและการเคลื่อนไหว */
+    text-align: center; /* จัดข้อความในปุ่มให้กึ่งกลาง */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+}
+
+.button:hover {
+    background-color: darken(var(--sec-color), 10%); /* สีพื้นหลังเมื่อ hover */
+    transform: scale(1.05); /* ขยายปุ่มเมื่อ hover */
+}
+
+.extra-text {
+    font-size: 16px; /* ขนาดฟอนต์ของข้อความ */
+    color: var(--text-color); /* สีของข้อความ */
+}
+.image-container {
+    text-align: center; /* จัดให้ข้อความอยู่กลางใต้ภาพ */
+    margin: 10px; /* ระยะห่างระหว่างภาพ */
+}
+
+.image-caption {
+    font-size: 14px; /* ขนาดฟอนต์ของข้อความใต้ภาพ */
+    color: var(--text-color); /* สีของข้อความใต้ภาพ */
+    margin-top: 5px; /* ระยะห่างระหว่างภาพและข้อความ */
+}
+
+#certificates{
+display: flex;
+flex-direction: column; /* Make sure to stack activity sections vertically */
+align-items: center; /* Center align the content */
+background-color: var(--background-color); /* Background color */
+padding: 20px; /* Padding around the section */
+}
+.certificates-container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    justify-items: center;
+    color: var(--text-color);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color: var(--text-color);
+}
+
+.certificate-item {
+    background-color: #374545;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.certificate-item img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.certificate-item p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+#contact_me h1{
+    display: flex;
+    flex-direction: column; /* Make sure to stack activity sections vertically */
+    align-items: center; /* Center align the content */
+    background-color: var(--background-color); /* Background color */
+    padding: 20px; /* Padding around the section */
+    }
+
+.custom_container { 
+    display: flex;
+    align-items: center; /* จัดกลางในแนวตั้ง */
+    justify-content: space-evenly; /* จัดเรียงให้เริ่มจากซ้าย */
+}
+
+.custom_image_container {
+    transform: rotate(-5deg);
+    margin-left: 30px; /* ระยะห่างจากข้อความ */
+}
+
+.custom_image_container img {
+    width: 100%; /* ทำให้ภาพขยายเต็มความกว้าง */
+    max-width: 220px; /* จำกัดความกว้างสูงสุดของภาพ */
+    border-radius: 15px;
+}
+
+.Cont {
+    margin-right: 30px; /* ระยะห่างระหว่างข้อความกับรูปภาพ */
+    text-align: left; /* จัดข้อความไปทางซ้าย */
+}
+
+.Cont p {
+    font-family: jose;
+    color: var(--text-color);
+    margin: 10px 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.Cont a {
+    margin-right: 15px; /* ระยะห่างระหว่างไอคอน */
+    display: inline-block; /* ทำให้แต่ละไอคอนเป็นบล็อกย่อยแยกกัน */
+}
+
+.Cont img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle; /* จัดไอคอนให้ตรงกับข้อความถ้ามี */
+}
+
+
+
+.totop{
+    position: fixed;
+    bottom:  10px;
+    right: 10px;
+    background-color: var(--text-color);
+    padding: 20px;
+    border-radius: 20px;
+}
+.totop img{
+    width: 20px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
 
 footer {
     background-color: var(--background-color);
-    color: #000000;
+    color: var(--text-color);
     padding: 20px;
     text-align: center;
     width: 100%;
-    margin-top: auto;
+    margin-top: 200px;
 }
+
