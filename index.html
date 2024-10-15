@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <title>PORTFOLIO</title>
-        <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WP PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
     </head>
 
 <body>
+
+
+    <script src="script.js"></script>
     <header>
-        <a href="index.html" class="logo">PORTFOLIO</a>
+        <a href="index.html" class="logo">Portfolio</a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navlist">
           <li><a href="#about_me">about_me</a></li>
-          <li><a href="#education">education</a></li>
           <li><a href="#activities">activities</a></li>
           <li><a href="#certificates">certificates</a></li>
           <li><a href="#contact_me">contact_me</a></li>
 
+
         </ul>
-
+        <div class="social-buttons"></div>
+            <a href="https://www.facebook.com/profile.php?id=100036075309815" target="_blank">
+              <img src="facebook-icon.png" alt="Facebook" width="40" height="40">
+            </a>
+            <a href="https://www.instagram.com/sx.ny_/" target="_blank">
+              <img src="instagram-icon.png" alt="Instagram" width="40" height="40">
+            </a>
+            <a href="https://www.youtube.com/@sonboy-gy9ls" target="_blank">
+              <img src="youtube-icon.png" alt="YouTube" width="40" height="40">
+            </a>
+          </div>
     </header>
-
+        
         <div class="banner">
             <div class="banner-info">
                 <div class="banner-text">
@@ -29,28 +43,26 @@
                     <h3 class="line3">Adventure Of A Lifetime</h3>
                 </div>
                 <img src="002.jpg" alt="Banner Image">
+                
             </div>
         </div>
+          
 
     </section>
     <!-- Main Start -->
     <main>
-        <div>
-            <h3>This is the Website I Use to Showcase My Work</h3>
-            <p>In today's digital age, having an online presence is crucial for anyone who wants to share their work with a wider audience. For me, this website is the platform I use to showcase my achievements, projects, and skills. It serves as a personal portfolio that allows me to present my work professionally and creatively.</p>
+        <div class="content-with-logo">
+            <img src="ICT-Logo.png" alt="Logo" class="logo">
+            <div class="text-content">
+                <h3>มหาวิทยาลัยมหิดล</h3>
+                <p>คณะเทคโนโลยีสารสนเทศและการสื่อสาร <br>
+                   สาขาวิทยาการและเทคโนโลยีดิจิทัล (DST) หลักสูตรภาษาไทย
+                </p>
+            </div>
         </div>
-        <div>
-            <h3>Welcome</h3>
-            <!-- <img src="DSC_0176.png" alt=""> -->
-            <p>Moreover, this website is not just a display of my work but also a reflection of my growth and learning journey. It allows me to update my portfolio regularly, ensuring that it stays current and represents my latest accomplishments.</p>
-        </div>
-        <div>
-            <h3>How to get here</h3>
-            <p>In conclusion, having a website to showcase my work has become an essential tool in my personal and professional development. It is a space where I can proudly present my skills and achievements to the world.</p>
-        </div>
-
-        
+        <button onclick="topFunction()" id="myBtn" title="Go to Top">ขึ้นบน</button>
     </main>
+
 
 
     <!-- Main End -->
@@ -60,31 +72,211 @@
     <script type="text/javascript">
         window.addEventListener("scroll", function() {
             var header = document.querySelector("header");
+            // Adding 'sticky' class if scrolled more than 0
             header.classList.toggle("sticky", window.scrollY > 0);
         });
     </script>
     
+    
     <!-- Section 2 Start -->
-<section id="about_me">
-    <div class="about_me-content">
-        <h2>My Projects</h2>
-        <p>Here are some of the projects I've worked on.</p>
-        <div class="projects-grid">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Details about the first project.</p>
+    <section id="about_me">
+        <div class="about-info">
+            <div class="about-image">
+                <img src="ISON.png" alt="About Me Image" class="main-image">
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Details about the second project.</p>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Details about the third project.</p>
+            <div class="right-content">
+                <!-- ย้ายเนื้อหา About Me ลงมา -->
+                <div class="about-text">
+                    <p>
+                        Hello, my name is Mr. Waraphon Phetchamnan. I am currently studying in the 12th grade of high school, majoring in the Science, Mathematics, and 
+                        Technology program at Muang Suratthani School.
+                    </p>
+                    <h2>About Me</h2>
+                </div>
+    
+                <div class="skills-container">
+                    <h1>My Skills</h1>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <img src="python-icon.png" alt="Python">
+                            <p>Python</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="html-css-icon.png" alt="HTML & CSS">
+                            <p>Html & CSS</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="cira-core-icon.png" alt="Cira Core">
+                            <p>Cira Core</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="adobe-ps-icon.png" alt="Adobe Ps">
+                            <p>Adobe Ps</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="adobe-pr-icon.png" alt="Adobe Pr">
+                            <p>Adobe Pr</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="education-container">
+                    <h1>Education</h1>
+                    <div class="school-container">
+                        <div class="school">
+                            <div class="timeline now">now</div>
+                            <div class="school-info">
+                                <h2>Muangsuratthani School</h2>
+                                <p class="subtext">โรงเรียนเมืองสุราษฎร์ธานี</p>
+                                <p>2019 - 2024: grade 7 - grade 12</p>
+                            </div>
+                            <div class="school-logo">
+                                <img src="muangsuratthani-logo.png" alt="Muangsuratthani School Logo">
+                            </div>
+                        </div>
+                        <div class="school">
+                            <div class="timeline">2019</div>
+                            <div class="school-info">
+                                <h2>Waminwittaya School</h2>
+                                <p class="subtext">โรงเรียนวมินทร์วิทยา (ฮัวเหมิง)</p>
+                                <p>2010 - 2018: kindergarten 1 - grade 6</p>
+                            </div>
+                            <div class="school-logo">
+                                <img src="waminwittaya-logo.png" alt="Waminwittaya School Logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    
+    
+    
+    
+    <section id="activities">
+        <h1>Activities</h1>
+        <div class="activity-container-1">
+            <div class="activity-images">
+                <img src="ISON_Chumporn.jpg" alt="Activity Image 1" class="activity-image">
+                <img src="cerchumporn.jpg" alt="Activity Image 2" class="activity-image">
+            </div>
+            <div class="activity-description">
+                <h2>ลาดกระบังชุมพรแฟร์ 2024</h2>
+                <h3>ผลงาน : WebApp ตรวจสอบสถานะการส่งงานของนักเรียน
+                    รองชนะเลิศอันดับ 2 ระดับ เหรียญเงิน</h3>
+                <p>
+                    การแข่งขันลาดกระบังชุมพรแฟร์ 2024 เป็นเวทีที่ท้าทายและสร้างสรรค์ กระผมได้เข้าร่วมด้วยผลงาน WebApp ตรวจสอบสถานะการส่งงานของนักเรียน ซึ่งช่วยครูและนักเรียนติดตามการส่งงานได้อย่างมีประสิทธิภาพ ระบบสามารถบันทึกและแจ้งเตือนการส่งงาน รวมถึงแสดงสถานะการส่งงานได้อย่างชัดเจน ตลอดการแข่งขัน กระผมได้พัฒนาทักษะด้านการออกแบบและการทำงานเป็นทีม และรู้สึกภูมิใจที่ผลงานได้รับรางวัลรองชนะเลิศอันดับ 2 ระดับเหรียญเงิน ซึ่งเป็นแรงบันดาลใจให้กระผมมุ่งมั่นพัฒนาต่อไป
+                </p>
+            </div>
+        </div>
+    
+        <!-- New Activity Section with a Different Class Name -->
+        <div class="activity-container-2">
+            <div class="activity-images">
+                <div class="image-container">
+                    <img src="MV.jpg" alt="Activity Image 3" class="activity-image">
+                    <span class="image-caption">"Music Video เพลง แค่ครั้งเดียว” 200k view</span>
+                </div>
+                <div class="image-container">
+                    <img src="DRONE.jpg" alt="Activity Image 4" class="activity-image">
+                    <span class="image-caption">"โครงการการประยุกต์ใช้เทคโนโลยีและนวัตกรรมโดรนเพื่อส่งเสริมการท่องเที่ยว: ภาคใต้" 3k view</span>
+                </div>
+            </div>
+            
+            <div class="activity-description">
+                <h2>Video Editer</h2>
+                <p>
+                    รับหน้าที่เป็นผู้ตัดต่อวิดีโอ เเละ ครีเอทีฟ ในการจัดทำคลิปวิดีโอ 2 คลิป คือ 1.Music Video เพลง “แค่ครั้งเดียว” และ 2.Drone Videography "โครงการการประยุกต์ใช้เทคโนโลยีและนวัตกรรมโดรนเพื่อส่งเสริมการท่องเที่ยว: ภาคใต้" โดยใช้โปรแกรม Premiere Pro ทำให้ผมได้ฝึกฝน หาความรู้ วิธีการในการตัดต่อวิด๊โอจนมีความเชี่ยวชาญมากขึ้น และสามารถรังสรรค์คลิปวิดีโอออกมาได้อย่างน่าสนใจ
+
+                    <div class="sub-button-container">
+                        <a href="https://www.facebook.com/share/v/GtoXvzBdERXauaLt/" class="button">Go to Video</a>
+                        <span class="extra-text">[ 𝗖𝗼𝘃𝗲𝗿 𝗠𝗩 ] 🎥 เพลง “แค่ครั้งเดียว” ร่วมกันจัดทำโดย คณะกรรมการสภานักเรียนโรงเรียนเมืองสุราษฎร์ธานีปีการศึกษา 2566 💜💛 </span>
+                    </div>
+                    <div class="sub-button-container">
+                        <a href="https://www.facebook.com/share/v/oBLvcpYYHYB3KQHY/" class="button">Go to Video</a>
+                        <span class="extra-text">ผลงานการตัดต่อจาก "โครงการการประยุกต์ใช้เทคโนโลยีและนวัตกรรมโดรนเพื่อส่งเสริมการท่องเที่ยว: ภาคใต้"💜💛</span>
+                
+
+            </div>
+        </div>
+    </section>
+    
+    <section id="certificates">
+        <h1>My Certificates</h1>
+        <div class="certificates-container">
+            
+            <div class="certificates-grid">
+                <div class="certificate-item">
+                    <img src="world-robot-olympiad.png" alt="World Robot Olympiad 2024">
+                    <p>World Robot Olympiad 2024</p>
+                </div>
+
+                <div class="certificate-item">
+                    <img src="maker-robotics-challenge.jpg" alt="Maker Robotics Challenge 2023">
+                    <img src="MRC_P.jpg" alt="Maker Robotics Challenge 2023">
+                    <p>Maker Robotics Challenge 2023</p>
+                </div>
+
+                <div class="certificate-item">
+                    <img src="Cer_Python.png" alt="Python for Data Science">
+                    <img src="PYTHON_code.jpg" alt="Python for Data Science">
+                    <p>Python for Data Science (10hr)</p>
+                </div>
+
+                <div class="certificate-item">
+                    <img src="NO.70.png" alt="SketchUp Certification 70">
+                    <img src="NO.71_P.jpg" alt="roboy mediem Certification 71">
+                    <p>งานศิลปหัตถกรรมครั้งที่ 70<br>ระดับชาติ (SketchUp)</p>
+                </div>
+
+                <div class="certificate-item">
+                    <img src="NO.71.jpg" alt="roboy mediem Certification 71">
+                    <img src="NO.71_P.jpg" alt="roboy mediem Certification 71">
+                    <p>งานศิลปหัตถกรรมครั้งที่ 71<br>ระดับชาติ หุ่นยนต์ ระดับกลาง</p>
+                </div>
+
+                <div class="certificate-item">
+                    <img src="SC.jpg" alt="MSTSC_2566">
+                    <img src="SC_2.jpg" alt="MSTSC_2566">
+                    <p>ได้รับการคัดเลือกเป็นคณะกรรมการสภานักเรียน<br>ปีการศึกษา 2566 </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="contact_me">
+        <h1>Contact Me</h1>
+        <div class="custom_container">
+            <div class="custom_image_container">
+                <img src="ISON_IN_Phone.png" alt="Person Image">
+            </div>
+            <div class="Cont">
+                <p>PHONE NO: +66 954630949</p>
+                <p>G-mail: Sonboy1345@gmail.com</p>
+                <p>Outlook: Woraphon1345@hotmail.com</p>
+                <p>FB: Son Woraphon</p>
+                <p>IG: sx.ny_</p>
+                <p>LINE: 1345son</p>
+                <a href="https://www.facebook.com/profile.php?id=100036075309815" target="_blank">
+                    <img src="facebook-icon.png" alt="Facebook" width="40" height="40">
+                </a>
+                <a href="https://www.instagram.com/sx.ny_/" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram" width="40" height="40">
+                </a>
+                <a href="https://www.youtube.com/@sonboy-gy9ls" target="_blank">
+                    <img src="youtube-icon.png" alt="YouTube" width="40" height="40">
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <a href="#" class="totop" id="scrollToTop">
+        <img src="gototop.jpg" alt="">
+    </a>
+
+
+
 <!-- Section 2 End -->
 
 </body>
